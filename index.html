@@ -19,7 +19,7 @@ body{
     justify-content:center;
     align-items:center;
     background:linear-gradient(135deg,#110a0b,#b46689);
-    padding:15px;
+    padding:20px;
 }
 
 .card{
@@ -36,58 +36,61 @@ body{
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(100,99,99,0.45);
+    background:rgba(0,0,0,0.35);
 }
 
+/* Content ab image ke lower part me rahega */
 .content{
-    position:relative;
+    position:absolute;
+    bottom:40px;
+    left:0;
+    width:100%;
     z-index:3;
     color:white;
     text-align:center;
-    padding:120px 30px 40px;
-}
-
-h1{
-    font-size:2.8rem;
-    margin-bottom:20px;
-}
-
-p{
-    font-size:1.3rem;
-    line-height:1.8;
+    padding:0 20px;
 }
 
 .love{
-    margin-top:220px;
     font-size:2rem;
-    color:white;
     font-weight:bold;
-    text-align:center;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:1.2rem;
+    line-height:1.7;
+    margin-bottom:15px;
 }
 
 /* Tablet */
 @media (max-width:768px){
 
     .card{
-        min-height:550px;
+        min-height:600px;
     }
 
     .content{
-        padding:120px 20px 30px;
+        bottom:25px;
+        padding:0 15px;
     }
 
     .love{
-        margin-top:120px;
         font-size:1.5rem;
     }
 
     h1{
-        font-size:2rem;
+        font-size:1.8rem;
     }
 
     p{
         font-size:1rem;
-        line-height:1.6;
+        line-height:1.5;
     }
 }
 
@@ -95,26 +98,26 @@ p{
 @media (max-width:480px){
 
     .card{
-        min-height:500px;
-        border-radius:18px;
+        min-height:900px;
+        border-radius:20px;
     }
 
     .content{
-        padding:60px 15px 25px;
+        bottom:35px;
+        padding:0 15px;
     }
 
     .love{
-        margin-top:90px;
-        font-size:1.2rem;
+        font-size:1rem;
     }
 
     h1{
-        font-size:1.4rem;
+        font-size:1.1rem;
     }
 
     p{
         font-size:0.9rem;
-        line-height:1.5;
+        line-height:1.4;
     }
 }
 </style>
@@ -132,7 +135,7 @@ p{
             I Love You, My Jaan-e-Hayat ❤️
         </div>
 
-        <h3>❤️ 23 Beautiful Weeks ❤️</h3>
+        <h1>❤️ 23 Beautiful Weeks ❤️</h1>
 
         <p>
             Today marks 23 beautiful weeks of our engagement.
@@ -140,11 +143,14 @@ p{
             creating memories that I will cherish forever.
         </p>
 
-        <br>
-
         <p>
             You are my happiness, my peace, and my forever.
-            Every day with you feels like a blessing. My Allah Proctect us from every evel eye , and evey kind of hardship (AMEEN)
+            Every day with you feels like a blessing.
+        </p>
+
+        <p>
+            May Allah protect us from every evil eye,
+            every hardship and keep us together forever. Ameen ❤️
         </p>
 
     </div>
