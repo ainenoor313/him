@@ -19,118 +19,126 @@ body{
     justify-content:center;
     align-items:center;
     background:linear-gradient(135deg,#110a0b,#b46689);
-    padding:20px;
+    padding:10px;
+    overflow:hidden;
 }
 
+/* ❤️ Hearts */
+.hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-60px;
+    font-size:22px;
+    animation:floatHearts 7s linear infinite;
+    opacity:0;
+}
+
+.hearts span:nth-child(1){left:10%;}
+.hearts span:nth-child(2){left:25%;animation-delay:2s;}
+.hearts span:nth-child(3){left:40%;animation-delay:4s;}
+.hearts span:nth-child(4){left:55%;animation-delay:1s;}
+.hearts span:nth-child(5){left:70%;animation-delay:3s;}
+.hearts span:nth-child(6){left:85%;animation-delay:5s;}
+.hearts span:nth-child(7){left:50%;animation-delay:6s;}
+
+@keyframes floatHearts{
+    0%{transform:translateY(0) scale(0.8);opacity:0;}
+    20%{opacity:1;}
+    100%{transform:translateY(-800px) scale(1.3);opacity:0;}
+}
+
+/* ❤️ CARD */
 .card{
     position:relative;
-    width:800px;
-    max-width:95%;
-    min-height:650px;
-    background:url('1.jpeg') center center/cover no-repeat;
-    border-radius:25px;
+    width:100%;
+    max-width:380px;
+    height:85vh;
+    background:url('1.jpeg') center/cover no-repeat;
+    border-radius:20px;
     overflow:hidden;
-    box-shadow:0 10px 35px rgba(236,229,229,0.3);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    z-index:2;
+
+    /* ⭐ CENTER CONTENT PERFECTLY */
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
+/* dark overlay */
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.35);
+    background:rgba(0,0,0,0.45);
 }
 
-/* Content ab image ke lower part me rahega */
+/* content now CENTER */
 .content{
-    position:absolute;
-    bottom:40px;
-    left:0;
-    width:100%;
+    position:relative;
     z-index:3;
     color:white;
     text-align:center;
-    padding:0 20px;
+    padding:20px;
+    max-width:90%;
 }
 
 .love{
-    font-size:2rem;
+    font-size:1.1rem;
     font-weight:bold;
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 h1{
-    font-size:2.4rem;
-    margin-bottom:15px;
+    font-size:1.3rem;
+    margin-bottom:10px;
 }
 
 p{
-    font-size:1.2rem;
-    line-height:1.7;
-    margin-bottom:15px;
+    font-size:0.9rem;
+    line-height:1.4;
+    margin-bottom:8px;
 }
 
-/* Tablet */
-@media (max-width:768px){
-
+/* 📱 small phones */
+@media (max-width:400px){
     .card{
-        min-height:600px;
+        max-width:340px;
+        height:88vh;
     }
 
-    .content{
-        bottom:25px;
-        padding:0 15px;
-    }
-
-    .love{
-        font-size:1.5rem;
-    }
-
-    h1{
-        font-size:1.8rem;
-    }
-
-    p{
-        font-size:1rem;
-        line-height:1.5;
-    }
-}
-
-/* Mobile */
-@media (max-width:480px){
-
-    .card{
-        min-height:900px;
-        border-radius:20px;
-    }
-
-    .content{
-        bottom:35px;
-        padding:0 15px;
-    }
-
-    .love{
-        font-size:1rem;
-    }
-
-    h1{
-        font-size:1.1rem;
-    }
-
-    p{
-        font-size:0.9rem;
-        line-height:1.4;
-    }
+    .love{font-size:1rem;}
+    h1{font-size:1.1rem;}
+    p{font-size:0.85rem;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<!-- ❤️ Hearts -->
+<div class="hearts">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+</div>
 
+<div class="card">
     <div class="overlay"></div>
 
     <div class="content">
-
         <div class="love">
             I Love You, My Jaan-e-Hayat ❤️
         </div>
@@ -139,22 +147,17 @@ p{
 
         <p>
             Today marks 23 beautiful weeks of our engagement.
-            In these weeks, we have fallen deeper in love with each other,
-            creating memories that I will cherish forever.
+            In these weeks, we have fallen deeper in love with each other.
         </p>
 
         <p>
             You are my happiness, my peace, and my forever.
-            Every day with you feels like a blessing.
         </p>
 
         <p>
-            May Allah protect us from every evil eye,
-            every hardship and keep us together forever. Ameen ❤️
+            May Allah protect us and keep us together forever. Ameen ❤️
         </p>
-
     </div>
-
 </div>
 
 </body>
